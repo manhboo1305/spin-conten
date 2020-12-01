@@ -1,0 +1,33 @@
+<div class="box box-info">
+    <div class="box-header">
+        <h3 class="box-title">CK Editor
+            <small>Advanced and full of features</small>
+        </h3>
+        <!-- tools box -->
+        <div class="pull-right box-tools">
+            <button type="button" class="btn btn-info btn-sm" data-widget="collapse" data-toggle="tooltip"
+                    title="Collapse">
+                <i class="fa fa-minus"></i></button>
+        </div>
+        <!-- /. tools -->
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body pad ">
+        <form action="">
+            @csrf
+            <div class="form-group">
+                <textarea id="editor1" name="str" rows="10" cols="80" ></textarea>
+            </div>
+        </form>
+        <div class="form-group col-lg-1">
+            <div>  <button  class='preview'>Preview</button></div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace( 'editor1', {
+        language: 'vi',
+        entities:false,
+    });
+</script>
