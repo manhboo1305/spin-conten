@@ -13,7 +13,7 @@ class CreateSpinsTable extends Migration
      */
     public function up()
     {
-        $tableNames = config('permission.table_names');
+        $tableNames = config('spin-config.table_names');
 
         Schema::create($tableNames['category_datas'], function (Blueprint $table) {
             $table->id();
