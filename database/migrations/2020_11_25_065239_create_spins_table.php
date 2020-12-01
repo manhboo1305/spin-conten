@@ -16,18 +16,18 @@ class CreateSpinsTable extends Migration
         $tableNames = config('spin-config.table_names');
 
         Schema::create($tableNames['category_datas'], function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->string('name')->unique()->nullable();
             $table->timestamps();
         });
         Schema::create($tableNames['group_of_words'], function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->string('name')->nullable();
             $table->integer('id_category')->nullable();
             $table->timestamps();
         });
         Schema::create($tableNames['spins'], function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->text('content')->nullable();
             $table->integer('id_category')->nullable();
             $table->timestamps();
