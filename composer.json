@@ -1,0 +1,40 @@
+{
+    "name": "manhnd/spin-text",
+    "description": "spin random text",
+    "type": "library",
+    "require": {
+        "php": ">=7",
+        "illuminate/support": "^5.5|^6|^7|^8",
+        "illuminate/database": "^5.8|^6.0|^7.0|^8.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "ManhND\\TextSpinner\\": "src"
+        }
+    },
+    "authors": [
+        {
+            "name": "nguyen duc manh",
+            "email": "manhnd@bse-corp.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ManhND\\TextSpinner\\SpinServiceProvider"
+            ],
+            "aliases": {
+                "Spin": "\\ManhND\\TextSpinner\\SpinText"
+            }
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
